@@ -1,5 +1,6 @@
-# test_authorized_keys
-Standalone project for auditing the security and tsting valid form of authorized_key lines or files.
+# ssh-check-keys
+
+Standalone project for auditing the security and tsting valid form of authorized_key lines or files. 
 
 Should initially test for:
 
@@ -7,4 +8,5 @@ Should initially test for:
 * small key sizes
 * keys impacted by 2008 compromized randomness bug in openssh
 
-should take one or more keys via stdin or a filename. exit 0 if all checks pass
+Should take one or more keys via stdin or a filename. exit 0 if all checks pass
+If run with no stdin or arguments, will check the .ssh/authorized_keys{,.d/*} for the current user.
